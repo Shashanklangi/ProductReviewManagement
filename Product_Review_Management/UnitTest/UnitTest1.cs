@@ -25,5 +25,15 @@ namespace Product_Review_Management
             int actual = product.AddProductReview();
             Assert.AreEqual(expected, actual);
         }
+        /// <summary>
+        /// TC 2: Retrieve Top Three Records Whose Rating is High
+        /// </summary>
+        [Test]
+        public void ForRetrieveTopThreeRecord()
+        {
+            int expected = 3;
+            var actual = product.RetrieveTopThreeRating();
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
