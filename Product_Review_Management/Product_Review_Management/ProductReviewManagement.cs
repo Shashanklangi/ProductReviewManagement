@@ -97,5 +97,17 @@ namespace Product_Review_Management
             }
             return result;
         }
+        // UC 6: Skip top Five records
+        public string SkipTop5Record()
+        {
+            AddProductReview();
+            string nameList = "";
+            var result = (from product in ProductReviewsList orderby product.Rating descending select product).Skip(5).ToList();
+            foreach (var element in result)
+            {
+                nameList += element.ProductID + " ";
+            }
+            return nameList;
+        }
     }
 }

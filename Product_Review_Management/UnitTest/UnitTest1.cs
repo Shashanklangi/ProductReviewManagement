@@ -65,6 +65,16 @@ namespace Product_Review_Management
             string actual = product.RetrieveOnlyProductIdAndReviews();
             Assert.AreEqual(expected, actual);
         }
+        /// <summary>
+        /// TC 6: Skip top Five records
+        /// </summary>
+        [Test]
+        public void givenRecords_SkipTopFiveandReturn()
+        {
+            string expected = "10 10 25 7 7 9 20 25 25 4 5 5 19 21 1 1 3 16 18 18 ";
+            string actual = product.SkipTop5Record();
+            Assert.AreEqual(expected, actual);
+        }
 
     }
 }
