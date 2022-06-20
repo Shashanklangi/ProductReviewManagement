@@ -105,7 +105,16 @@ namespace Product_Review_Management
             string actual = product.AverageofRatingBasedonProductId();
             Assert.AreEqual(expected, actual);
         }
-
+        /// <summary>
+        /// TC 11: Retrieve records where review is Nice
+        /// </summary>
+        [Test]
+        public void TestMethodForReviewReturnsString()
+        {
+            string expected = "6 7 ";
+            string actual = product.ReturnsReviewMessageContainsNice();
+            Assert.AreEqual(expected, actual);
+        }
 
     }
 }
