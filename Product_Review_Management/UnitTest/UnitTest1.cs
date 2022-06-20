@@ -55,5 +55,16 @@ namespace Product_Review_Management
             string actual = product.CountingProductId();
             Assert.AreEqual(expected, actual);
         }
+        /// <summary>
+        /// TC 5: Retrieving the product ID and Review from list
+        /// </summary>
+        [Test]
+        public void TestMethodForProductId()
+        {
+            string expected = "1 1 3 4 5 5 7 7 9 10 10 10 10 1 4 16 18 18 19 20 21 9 25 25 25 ";
+            string actual = product.RetrieveOnlyProductIdAndReviews();
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }
