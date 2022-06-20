@@ -115,6 +115,16 @@ namespace Product_Review_Management
             string actual = product.ReturnsReviewMessageContainsNice();
             Assert.AreEqual(expected, actual);
         }
+        /// <summary>
+        /// TC 12: Retrieve Record based on rating where userid=10 
+        /// </summary>
+        [Test]
+        public void TestMethodForReview_UserIdisTen_ReturnsString()
+        {
+            string expected = "2 3 ";
+            string actual = product.RetrieveRecordsBasedOnRating();
+            Assert.AreEqual(expected, actual);
+        }
 
     }
 }
