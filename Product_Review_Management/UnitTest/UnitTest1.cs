@@ -95,6 +95,17 @@ namespace Product_Review_Management
             string actual = product.ReturnsOnlyIsLikeFieldAsTrue();
             Assert.AreEqual(expected, actual);
         }
+        /// <summary>
+        /// TC 10: Average of rating based on ProductID
+        /// </summary>
+        [Test]
+        public void TestMethodForReturns_AverageofRating()
+        {
+            string expected = "2.3 1 3.5 2 3 4 4.2 1 1 2 3 2 3.3 ";
+            string actual = product.AverageofRatingBasedonProductId();
+            Assert.AreEqual(expected, actual);
+        }
+
 
     }
 }
